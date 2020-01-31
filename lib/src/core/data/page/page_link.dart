@@ -1,4 +1,4 @@
-class Page {
+class PageLink {
   final String image;
   final String title;
   final String subtitle;
@@ -6,7 +6,7 @@ class Page {
   final String button;
   final String buttonUrl;
 
-  const Page(
+  const PageLink(
       {this.image,
       this.title,
       this.subtitle,
@@ -14,8 +14,7 @@ class Page {
       this.button,
       this.buttonUrl});
 
-  static Page first() => Page(
-      image: "assets/netguru1.jpg",
+  static PageLink first() => PageLink(
       title: "Dream job",
       subtitle: "Find your dream job at Netguru",
       description:
@@ -23,16 +22,14 @@ class Page {
       button: "View available jobs",
       buttonUrl: "https://www.netguru.com/career");
 
-  static Page second() => Page(
-      image: "assets/netguru2.jpg",
+  static PageLink second() => PageLink(
       title: "Our culture supports our vision",
       subtitle: "Dive deep into our unique culture",
       description: "Core values. Social norms. Principles of collaboration.",
       button: "See the Culture book",
       buttonUrl: "https://www.netguru.com/netguru-culture-book");
 
-  static Page third() => Page(
-      image: "assets/netguru3.jpg",
+  static PageLink third() => PageLink(
       title: "Netguru College workshops",
       subtitle: "Learn from the best",
       description:
@@ -40,5 +37,5 @@ class Page {
       button: "Find out more",
       buttonUrl: "https://www.netguru.com/netgurucollege");
 
-  static List<Page> all() => [first(), second(), third()];
+  static List<PageLink> all() => [first(), second(), third()];
 }
