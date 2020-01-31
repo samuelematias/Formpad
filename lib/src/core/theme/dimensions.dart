@@ -1,9 +1,8 @@
 class Space {
   Space._();
 
-  static final small = 8.0;
-  static final normal = 16.0;
-  static final large = 48.0;
-  static final headerHeight = 55.0;
-  static final menuHeight = 90.0;
+  static const double spring_green = 8.0;
+  static const double golden_dream = 16.0;
+  static const double geraldine = 22.0;
+  static const double conifer = 48.0;
 }
