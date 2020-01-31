@@ -1,1 +1,1 @@
-const String sulSansBoldItalic = 'ProximaNova-Regular';
+const String proximaNova = 'ProximaNova-Regular';
