@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:Formpad/src/core/theme/texts.dart';
 
 void main() => runApp(MyApp());
 
@@ -93,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-            ),
+            ).h1(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
