@@ -1,7 +1,7 @@
 library social_media;
 
-import 'package:Formpad/src/core/constants/assets/assets.dart';
 import 'package:Formpad/src/core/theme/colors.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
 
 class SocialMedia extends StatelessWidget {
@@ -22,10 +22,10 @@ class SocialMedia extends StatelessWidget {
           child: FlatButton(
             onPressed: () {},
             color: ColorTheme.green,
-            child: Image(
-              image: AssetImage(iconGithub),
-              alignment: Alignment.center,
-              height: 15.0,
+            child: Icon(
+              AntDesign.github,
+              color: ColorTheme.white,
+              size: 16,
             ),
           ),
         ),
@@ -34,10 +34,10 @@ class SocialMedia extends StatelessWidget {
           child: FlatButton(
             onPressed: () {},
             color: ColorTheme.green,
-            child: Image(
-              image: AssetImage(iconTwitter),
-              alignment: Alignment.center,
-              height: 15.0,
+            child: Icon(
+              AntDesign.twitter,
+              color: ColorTheme.white,
+              size: 16,
             ),
           ),
         ),
