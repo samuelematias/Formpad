@@ -1,12 +1,12 @@
-/// FeedbackForm is a data class which stores data fields of Feedback.
-class FeedbackForm {
+/// FormModel is a data class which stores data fields of Feedback.
+class FormModel {
   String name;
   String genre;
   String howFind;
   String feedback;
   String firstMeetup;
 
-  FeedbackForm(
+  FormModel(
       this.name, this.genre, this.howFind, this.firstMeetup, this.feedback);
 
   // Method to make GET parameters.
