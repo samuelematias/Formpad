@@ -20,6 +20,8 @@ class _FormPageState extends State<FormPage> {
   final TextEditingController firstMeetupController = TextEditingController();
   final TextEditingController feedbackController = TextEditingController();
 
+  FocusScopeNode currentFocus;
+
   void _submitForm() {
     if (_formKey.currentState.validate()) {
       final FormModel formModel = FormModel(
@@ -62,7 +64,19 @@ class _FormPageState extends State<FormPage> {
       ),
       backgroundColor: ColorTheme.white,
       body: SafeArea(
-        child: _buidBody(),
+        child: GestureDetector(
+          onTap: () {
+            currentFocus = FocusScope.of(context);
+
+            if (!currentFocus.hasPrimaryFocus) {
+              currentFocus.unfocus();
+            }
+          },
+          child: Container(
+            color: Colors.transparent,
+            child: _buidBody(),
+          ),
+        ),
       ),
     );
   }
