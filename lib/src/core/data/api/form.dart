@@ -14,6 +14,7 @@ class FormApi {
 
   // Success Status Message
   static const STATUS_SUCCESS = "SUCCESS";
+  static const STATUS_ERROR = "ERROR";
 
   // Default Contructor
   FormApi(this.callback);
@@ -26,7 +27,7 @@ class FormApi {
         callback(convert.jsonDecode(response.body)['status']);
       });
     } catch (e) {
-      return e;
+      callback(STATUS_ERROR);
     }
   }
 }
