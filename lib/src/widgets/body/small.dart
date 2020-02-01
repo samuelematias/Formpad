@@ -1,3 +1,4 @@
+import 'package:Formpad/src/core/constants/assets/assets.dart';
 import 'package:Formpad/src/core/theme/theme.dart';
 import 'package:Formpad/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -17,38 +18,24 @@ class BodySmall extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Expanded(
-                    flex: 2,
+                    flex: 5,
                     child: Container(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            child: Text(
-                              "Carica store new product",
-                            ).p1(),
-                          ).paddingOnly(top: Space.portage),
+                            child: Image(
+                              image: AssetImage(formpadLogoBlack),
+                              alignment: Alignment.center,
+                            ),
+                          ).paddingSymmetric(vertical: Space.geraldine),
                           Container(
                             child: Text(
-                              "Interior Design",
-                            ).h2(),
-                          ).paddingOnly(bottom: 10.0),
-                          Container(
-                            child: Text(
-                              "Recliner lad, eu mollis diam, vitae gravida mauris. Cras mollis malesuada sem vitae venenatis. Morbi at erat eget nulla placerat egestas ",
+                              "A forma fácil de se trabalhar com Form :D",
                             ).h4(),
                           ).paddingOnly(bottom: Space.fire_bush),
-                          FlatButton(
-                            onPressed: () {},
-                            color: ColorTheme.lightBlue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16.0),
-                            ),
-                            child: Container(
-                              child: Text(
-                                "Read More",
-                              ).b1(),
-                            ).paddingAll(Space.spring_green),
-                          ),
+                          DefaultButton(),
                         ],
                       ),
                     ).paddingSymmetric(horizontal: Space.dodger_blue),
@@ -58,7 +45,7 @@ class BodySmall extends StatelessWidget {
                       alignment: Alignment.bottomCenter,
                       child: Container(
                         width: double.infinity,
-                        color: ColorTheme.beige,
+                        color: ColorTheme.green,
                         padding: EdgeInsets.all(12.0),
                         child: SocialMedia(
                           size: MainAxisSize.max,
