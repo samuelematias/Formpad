@@ -1,10 +1,14 @@
 library social_media;
 
 import 'package:Formpad/src/core/constants/assets/assets.dart';
+import 'package:Formpad/src/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class SocialMedia extends StatelessWidget {
-  const SocialMedia({Key key, this.size = MainAxisSize.min}) : super(key: key);
+  const SocialMedia({
+    Key key,
+    this.size = MainAxisSize.min,
+  }) : super(key: key);
   final MainAxisSize size;
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class SocialMedia extends StatelessWidget {
           height: 50,
           child: FlatButton(
             onPressed: () {},
-            color: Color(0XFFFBEFD9),
+            color: ColorTheme.beige,
             child: Image(
               image: AssetImage(iconGithubBlack),
               alignment: Alignment.center,
@@ -29,19 +33,7 @@ class SocialMedia extends StatelessWidget {
           height: 50,
           child: FlatButton(
             onPressed: () {},
-            color: Color(0XFFFBEFD9),
-            child: Image(
-              image: AssetImage(iconTwitter),
-              alignment: Alignment.center,
-              height: 15.0,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 50,
-          child: FlatButton(
-            onPressed: () {},
-            color: Color(0XFFFBEFD9),
+            color: ColorTheme.beige,
             child: Image(
               image: AssetImage(iconTwitter),
               alignment: Alignment.center,

@@ -14,4 +14,7 @@ class ColorTheme {
   static final white80 = Color(0x80ffffff);
   static final whiteCC = Color(0xccffffff);
   static final black = Color(0xff000000);
+  static final red = Color(0xFFEA1D2C);
+  static final lightBlue = Color(0xFFCFE8E4);
+  static final beige = Color(0xFFFBEFD9);
 }
