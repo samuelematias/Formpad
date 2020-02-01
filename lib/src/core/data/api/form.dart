@@ -2,9 +2,9 @@ import 'dart:convert' as convert;
 import 'package:Formpad/src/core/data/model/form.dart';
 import 'package:http/http.dart' as http;
 
-/// FormController is a class which does work of saving FeedbackForm in Google Sheets using
+/// FormApi is a class which does work of saving FormModel in Google Sheets using
 /// HTTP GET request on Google App Script Web URL and parses response and sends result callback.
-class FormController {
+class FormApi {
   // Callback function to give response of status of current request.
   final void Function(String) callback;
 
@@ -16,13 +16,13 @@ class FormController {
   static const STATUS_SUCCESS = "SUCCESS";
 
   // Default Contructor
-  FormController(this.callback);
+  FormApi(this.callback);
 
-  /// Async function which saves feedback, parses [feedbackForm] parameters
+  /// Async function which saves feedback, parses [FormModel] parameters
   /// and sends HTTP GET request on [URL]. On successful response, [callback] is called.
-  void submitForm(FeedbackForm feedbackForm) async {
+  void submitForm(FormModel formModel) async {
     try {
-      await http.get(URL + feedbackForm.toParams()).then((response) {
+      await http.get(URL + formModel.toParams()).then((response) {
         callback(convert.jsonDecode(response.body)['status']);
       });
     } catch (e) {
