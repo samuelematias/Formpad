@@ -1,4 +1,5 @@
 import 'package:Formpad/src/core/theme/theme.dart';
+import 'package:Formpad/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -19,7 +20,7 @@ class DefaultButton extends StatelessWidget {
       onPressed: active && !loading ? onPressed : null,
       color: ColorTheme.green,
       child: Container(
-        child: Text(label).b1(),
+        child: loading ? CustomProgressIndicator() : Text(label).b1(),
       ).paddingAll(Space.dodger_blue),
     );
   }
