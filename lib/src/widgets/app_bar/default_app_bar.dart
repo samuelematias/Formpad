@@ -1,4 +1,5 @@
 import 'package:Formpad/src/core/theme/theme.dart';
+import 'package:Formpad/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -49,5 +50,6 @@ class DefaultAppBar extends AppBar {
               alignment: Alignment.center,
             ),
           ),
+          actions: <Widget>[Beta()],
         );
 }
