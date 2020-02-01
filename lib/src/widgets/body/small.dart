@@ -35,7 +35,11 @@ class BodySmall extends StatelessWidget {
                               "A forma fácil de se trabalhar com Form :D",
                             ).h4(),
                           ).paddingOnly(bottom: Space.fire_bush),
-                          DefaultButton(),
+                          DefaultButton(
+                            label: "Acessar o Form",
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/form'),
+                          ),
                         ],
                       ),
                     ).paddingSymmetric(horizontal: Space.dodger_blue),

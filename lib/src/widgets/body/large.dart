@@ -26,7 +26,10 @@ class BodyLarge extends StatelessWidget {
                   "A forma fácil de se trabalhar com Form :D",
                 ).h3(),
               ).paddingOnly(bottom: Space.fire_bush),
-              DefaultButton(),
+              DefaultButton(
+                label: "Acessar o Form",
+                onPressed: () => Navigator.pushNamed(context, '/form'),
+              ),
             ],
           ),
         ),
