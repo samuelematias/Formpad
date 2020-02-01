@@ -46,7 +46,7 @@ extension TextStyles on Text {
           fontSize: 24.0,
           fontFamily: openSans,
         ),
-        textAlign: TextAlign.justify,
+        textAlign: TextAlign.center,
       );
     }
     return null;
@@ -63,7 +63,7 @@ extension TextStyles on Text {
           fontSize: 20.0,
           fontFamily: openSans,
         ),
-        textAlign: TextAlign.justify,
+        textAlign: TextAlign.center,
       );
     }
     return null;
