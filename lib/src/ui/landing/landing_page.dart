@@ -8,40 +8,22 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      //   elevation: 0.0,
-      //   centerTitle: true,
-      //   title: Text(
-      //     "Furniture",
-      //     style: TextStyle(
-      //         color: Colors.black,
-      //         fontSize: 24.0,
-      //         fontWeight: FontWeight.w800,
-      //         fontStyle: FontStyle.italic),
-      //   ),
-      //   leading: Image.asset("icon/nav-icon.png"),
-      //   actions: <Widget>[
-      //     Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 20.0),
-      //       child: Icon(
-      //         Icons.search,
-      //         color: Colors.black,
-      //       ),
-      //     )
-      //   ],
-      // ),
       body: ResponsiveLayout(
         largeChild: Stack(
           children: [
             Align(
               alignment: Alignment.bottomRight,
               child: Container(
+                color: ColorTheme.green,
                 child: SizedBox(
                   height: 50.0,
                   child: SocialMedia(),
                 ),
               ).paddingAll(Space.conifer),
+            ),
+            Positioned(
+              right: 0.0,
+              child: Beta(),
             ),
             BodyLarge(),
           ],
