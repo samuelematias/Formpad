@@ -7,3 +7,4 @@ const String iconMenuBlack = '${PREFIX}icons/icon-menu-black.png';
 const String iconGithub = '${PREFIX}icons/icon-github.png';
 const String iconGithubBlack = '${PREFIX}icons/icon-github-black.png';
 const String iconTwitter = '${PREFIX}icons/icon-twitter.png';
+const String iconTwitterBlack = '${PREFIX}icons/icon-twitter-black.png';
