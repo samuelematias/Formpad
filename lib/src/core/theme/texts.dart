@@ -92,6 +92,7 @@ extension TextStyles on Text {
         t.data,
         style: TextStyle(
           fontFamily: openSans,
+          color: ColorTheme.white,
         ),
       );
     }
