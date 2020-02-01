@@ -7,10 +7,10 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorTheme.white,
       body: ResponsiveLayout(
         largeChild: Stack(
-          children: [
+          children: <Widget>[
             Align(
               alignment: Alignment.bottomRight,
               child: Container(
@@ -21,15 +21,24 @@ class LandingPage extends StatelessWidget {
                 ),
               ).paddingAll(Space.conifer),
             ),
-            Positioned(
-              right: 0.0,
-              child: Beta(),
-            ),
+            _betaBanner(),
             BodyLarge(),
           ],
         ),
-        smallChild: BodySmall(),
+        smallChild: Stack(
+          children: <Widget>[
+            _betaBanner(),
+            BodySmall(),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _betaBanner() {
+    return Positioned(
+      right: 0.0,
+      child: Beta(),
     );
   }
 }
