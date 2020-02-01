@@ -17,4 +17,5 @@ class ColorTheme {
   static final red = Color(0xFFEA1D2C);
   static final lightBlue = Color(0xFFCFE8E4);
   static final beige = Color(0xFFFBEFD9);
+  static final green = Color(0xFF36923D);
 }
