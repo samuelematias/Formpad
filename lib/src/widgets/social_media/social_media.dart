@@ -21,9 +21,9 @@ class SocialMedia extends StatelessWidget {
           height: 50,
           child: FlatButton(
             onPressed: () {},
-            color: ColorTheme.beige,
+            color: ColorTheme.green,
             child: Image(
-              image: AssetImage(iconGithubBlack),
+              image: AssetImage(iconGithub),
               alignment: Alignment.center,
               height: 15.0,
             ),
@@ -33,7 +33,7 @@ class SocialMedia extends StatelessWidget {
           height: 50,
           child: FlatButton(
             onPressed: () {},
-            color: ColorTheme.beige,
+            color: ColorTheme.green,
             child: Image(
               image: AssetImage(iconTwitter),
               alignment: Alignment.center,
