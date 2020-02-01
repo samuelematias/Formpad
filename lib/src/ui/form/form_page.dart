@@ -95,27 +95,25 @@ class _FormPageState extends State<FormPage> {
                       ),
                     ).paddingSymmetric(horizontal: Space.dodger_blue),
                   ),
-                  Expanded(
-                    child: ResponsiveLayout(
-                      largeChild: Align(
-                        alignment: Alignment.bottomRight,
-                        child: Container(
-                          color: ColorTheme.green,
-                          child: SizedBox(
-                            height: 50.0,
-                            child: SocialMedia(),
-                          ),
-                        ).paddingAll(Space.conifer),
-                      ),
-                      smallChild: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          width: double.infinity,
-                          color: ColorTheme.green,
-                          padding: EdgeInsets.all(12.0),
-                          child: SocialMedia(
-                            size: MainAxisSize.max,
-                          ),
+                  ResponsiveLayout(
+                    largeChild: Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        color: ColorTheme.green,
+                        child: SizedBox(
+                          height: 50.0,
+                          child: SocialMedia(),
+                        ),
+                      ).paddingAll(Space.conifer),
+                    ),
+                    smallChild: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        width: double.infinity,
+                        color: ColorTheme.green,
+                        padding: EdgeInsets.all(12.0),
+                        child: SocialMedia(
+                          size: MainAxisSize.max,
                         ),
                       ),
                     ),
