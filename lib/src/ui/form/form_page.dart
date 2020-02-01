@@ -50,6 +50,14 @@ class _FormPageState extends State<FormPage> {
     _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 
+  void _unfocus() {
+    currentFocus = FocusScope.of(context);
+
+    if (!currentFocus.hasPrimaryFocus) {
+      currentFocus.unfocus();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,18 +68,13 @@ class _FormPageState extends State<FormPage> {
         title: 'Preencher o Form',
         onClickBackButton: () {
           Navigator.pop(context);
+          _unfocus();
         },
       ),
       backgroundColor: ColorTheme.white,
       body: SafeArea(
         child: GestureDetector(
-          onTap: () {
-            currentFocus = FocusScope.of(context);
-
-            if (!currentFocus.hasPrimaryFocus) {
-              currentFocus.unfocus();
-            }
-          },
+          onTap: () => _unfocus(),
           child: Container(
             color: Colors.transparent,
             child: _buidBody(),
@@ -101,10 +104,13 @@ class _FormPageState extends State<FormPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           _buildForm(),
-                          DefaultButton(
-                            label: 'Submeter Feedback',
-                            onPressed: _submitForm,
-                          ),
+                          Container(
+                            child: DefaultButton(
+                              label: 'Submeter Feedback',
+                              onPressed: _submitForm,
+                            ),
+                          ).paddingOnly(
+                              bottom: MediaQuery.of(context).viewInsets.bottom),
                         ],
                       ),
                     ).paddingSymmetric(horizontal: Space.dodger_blue),
