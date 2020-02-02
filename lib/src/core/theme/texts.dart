@@ -1,4 +1,5 @@
 import 'package:Formpad/src/core/theme/colors.dart';
+import 'package:Formpad/src/core/theme/fonts.dart';
 import 'package:flutter/material.dart';
 
 extension TextStyles on Text {
@@ -8,8 +9,10 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: ColorTheme.white80,
-          fontSize: 14,
+          color: ColorTheme.black,
+          fontWeight: FontWeight.w600,
+          fontSize: 50.0,
+          fontFamily: merriweather,
         ),
       );
     }
@@ -22,10 +25,45 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: ColorTheme.white,
-          fontSize: 50,
-          fontWeight: FontWeight.bold,
+          color: ColorTheme.black,
+          fontWeight: FontWeight.w600,
+          fontSize: 35.0,
+          fontFamily: merriweather,
         ),
+      );
+    }
+    return null;
+  }
+
+  Text h3() {
+    if (this is Text) {
+      final Text t = this;
+      return Text(
+        t.data,
+        style: TextStyle(
+          color: ColorTheme.black,
+          fontWeight: FontWeight.w400,
+          fontSize: 24.0,
+          fontFamily: openSans,
+        ),
+        textAlign: TextAlign.center,
+      );
+    }
+    return null;
+  }
+
+  Text h4() {
+    if (this is Text) {
+      final Text t = this;
+      return Text(
+        t.data,
+        style: TextStyle(
+          color: ColorTheme.black,
+          fontWeight: FontWeight.w400,
+          fontSize: 20.0,
+          fontFamily: openSans,
+        ),
+        textAlign: TextAlign.center,
       );
     }
     return null;
@@ -37,8 +75,10 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: ColorTheme.whiteCC,
-          fontSize: 16,
+          color: ColorTheme.black,
+          fontWeight: FontWeight.w600,
+          fontSize: 16.0,
+          fontFamily: openSans,
         ),
       );
     }
@@ -51,8 +91,8 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
+          fontFamily: openSans,
           color: ColorTheme.white,
-          fontSize: 15,
         ),
       );
     }
@@ -88,6 +128,23 @@ extension TextStyles on Text {
     }
     return null;
   }
+
+  Text m1() {
+    if (this is Text) {
+      final Text t = this;
+      return Text(
+        t.data,
+        style: TextStyle(
+          color: ColorTheme.white,
+          fontWeight: FontWeight.w400,
+          fontSize: 14.0,
+          fontFamily: openSans,
+        ),
+        textAlign: TextAlign.center,
+      );
+    }
+    return null;
+  }
 }
 
 extension TextSpanStyles on TextSpan {
@@ -112,7 +169,7 @@ extension TextSpanStyles on TextSpan {
       return TextSpan(
         text: t.text,
         style: TextStyle(
-          color: Colors.red,
+          color: ColorTheme.red,
           fontSize: 14,
           decoration: TextDecoration.underline,
           fontWeight: FontWeight.w800,
