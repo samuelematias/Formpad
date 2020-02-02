@@ -33,12 +33,21 @@ class _FormPageState extends State<FormPage> {
     'Não',
   ];
 
+  List<String> genreItems = [
+    'Masculino',
+    'Feminino',
+    'Trans',
+    'Não-binário',
+    'Outro',
+  ];
+
   bool _isLoading = false;
 
   void _submitForm() {
     if (_formKey.currentState.validate() &&
         howFindController.text.isNotEmpty &&
-        firstMeetupController.text.isNotEmpty) {
+        firstMeetupController.text.isNotEmpty &&
+        genreController.text.isNotEmpty) {
       setState(() {
         _isLoading = true;
       });
@@ -51,43 +60,19 @@ class _FormPageState extends State<FormPage> {
       );
 
       final FormApi formApi = FormApi((String response) {
-        if (response == FormApi.STATUS_SUCCESS) {
-          _showFlashMessage(
-            "Form Submetido :D !",
-            position: FlashPosition.top,
-          );
-          nameController.clear();
-          genreController.clear();
-          howFindController.clear();
-          firstMeetupController.clear();
-          feedbackController.clear();
-          setState(() {
-            _isLoading = false;
-          });
-        }
-        // else if (response == FormApi.STATUS_ERROR) {
-        //   _showFlashMessage(
-        //     "Ops! Erro ao Submeter o Form, Tente novamente.",
-        //     position: FlashPosition.top,
-        //   );
-        //   setState(() {
-        //     _isLoading = false;
-        //   });
-        // }
-        else {
-          _showFlashMessage(
-            "Ops! Tente novamente. $response",
-            position: FlashPosition.top,
-          );
-          setState(() {
-            _isLoading = false;
-          });
-        }
+        _showFlashMessage(
+          "Form Submetido :D !",
+          position: FlashPosition.top,
+        );
+        nameController.clear();
+        genreController.clear();
+        howFindController.clear();
+        firstMeetupController.clear();
+        feedbackController.clear();
+        setState(() {
+          _isLoading = false;
+        });
       });
-      _showFlashMessage(
-        "Submetendo Form...",
-        position: FlashPosition.top,
-      );
       formApi.submitForm(formModel);
     } else {
       _showFlashMessage(
@@ -239,27 +224,26 @@ class _FormPageState extends State<FormPage> {
                 }
                 return null;
               },
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(labelText: 'Seu Nome'),
             ),
-            TextFormField(
+            Dropdown(
               controller: genreController,
-              enabled: !_isLoading,
-              maxLength: 50,
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Seu Gênero';
-                }
-                return null;
-              },
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(labelText: 'Seu Gênero'),
+              field: TextFormField(
+                controller: genreController,
+                enabled: false,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  labelText: 'Seu Gênero',
+                ),
+              ),
+              items: genreItems,
             ),
             Dropdown(
               controller: howFindController,
               field: TextFormField(
                 controller: howFindController,
                 enabled: false,
-                maxLength: 50,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   labelText: 'Como Achou do React Recife?',
@@ -272,7 +256,6 @@ class _FormPageState extends State<FormPage> {
               field: TextFormField(
                 controller: firstMeetupController,
                 enabled: false,
-                maxLength: 50,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   labelText: 'Sua primeira vez no meetup?',
@@ -283,15 +266,15 @@ class _FormPageState extends State<FormPage> {
             TextFormField(
               controller: feedbackController,
               enabled: !_isLoading,
-              maxLength: 150,
-              maxLines: 2,
+              maxLength: 100,
+              maxLines: 1,
               validator: (value) {
                 if (value.isEmpty) {
                   return 'De seu Feedback pls, ty :)';
                 }
                 return null;
               },
-              keyboardType: TextInputType.multiline,
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(labelText: 'Feedback'),
             ),
           ],
