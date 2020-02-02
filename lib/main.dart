@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
     ));
 
     return MaterialApp(
+      title: 'Formpad',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: proximaNova),
       home: HomePage(),
