@@ -1,6 +1,7 @@
 analyzer:
   exclude:
     - lib/generated/**
+    - lib/generated_plugin_registrant.dart
   #  strong-mode:
   #    implicit-dynamic: false
   errors:
