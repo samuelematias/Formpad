@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: proximaNova),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       home: HomePage(),
       initialRoute: '/',
       onGenerateRoute: Router.generateRoute,
