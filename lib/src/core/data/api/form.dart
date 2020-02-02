@@ -27,7 +27,7 @@ class FormApi {
         callback(convert.jsonDecode(response.body)['status']);
       });
     } catch (e) {
-      callback(STATUS_ERROR);
+      callback(e);
     }
   }
 }

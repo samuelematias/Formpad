@@ -12,7 +12,6 @@ class FormPage extends StatefulWidget {
 
 class _FormPageState extends State<FormPage> {
   final _formKey = GlobalKey<FormState>();
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   final TextEditingController nameController = TextEditingController();
   final TextEditingController genreController = TextEditingController();
@@ -65,17 +64,19 @@ class _FormPageState extends State<FormPage> {
           setState(() {
             _isLoading = false;
           });
-        } else if (response == FormApi.STATUS_ERROR) {
+        }
+        // else if (response == FormApi.STATUS_ERROR) {
+        //   _showFlashMessage(
+        //     "Ops! Erro ao Submeter o Form, Tente novamente.",
+        //     position: FlashPosition.top,
+        //   );
+        //   setState(() {
+        //     _isLoading = false;
+        //   });
+        // }
+        else {
           _showFlashMessage(
-            "Ops! Erro ao Submeter o Form, Tente novamente.",
-            position: FlashPosition.top,
-          );
-          setState(() {
-            _isLoading = false;
-          });
-        } else {
-          _showFlashMessage(
-            "Ops! Tente novamente.",
+            "Ops! Tente novamente. $response",
             position: FlashPosition.top,
           );
           setState(() {
@@ -133,7 +134,6 @@ class _FormPageState extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
       resizeToAvoidBottomPadding: false,
       appBar: DefaultAppBar(
         context: context,
