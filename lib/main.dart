@@ -1,6 +1,7 @@
 import 'package:Formpad/src/core/routes/router.dart';
 import 'package:Formpad/src/core/theme/theme.dart';
-import 'package:Formpad/src/ui/landing/landing_page.dart';
+import 'package:Formpad/src/ui/home/home_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: proximaNova),
-      home: LandingPage(),
+      home: HomePage(),
       initialRoute: '/',
       onGenerateRoute: Router.generateRoute,
     );

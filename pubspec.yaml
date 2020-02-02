@@ -46,8 +46,6 @@ flutter:
     - lib/assets/
     #Images
     - lib/assets/images/
-    # #Icons
-    - lib/assets/images/icons/
   fonts:
     - family: ProximaNova
       fonts:
