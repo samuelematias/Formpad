@@ -9,7 +9,7 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: Colors.black,
+          color: ColorTheme.black,
           fontWeight: FontWeight.w600,
           fontSize: 50.0,
           fontFamily: merriweather,
@@ -25,7 +25,7 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: Colors.black,
+          color: ColorTheme.black,
           fontWeight: FontWeight.w600,
           fontSize: 35.0,
           fontFamily: merriweather,
@@ -41,7 +41,7 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: Colors.black,
+          color: ColorTheme.black,
           fontWeight: FontWeight.w400,
           fontSize: 24.0,
           fontFamily: openSans,
@@ -58,7 +58,7 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: Colors.black,
+          color: ColorTheme.black,
           fontWeight: FontWeight.w400,
           fontSize: 20.0,
           fontFamily: openSans,
@@ -75,7 +75,7 @@ extension TextStyles on Text {
       return Text(
         t.data,
         style: TextStyle(
-          color: Colors.black,
+          color: ColorTheme.black,
           fontWeight: FontWeight.w600,
           fontSize: 16.0,
           fontFamily: openSans,
@@ -128,6 +128,23 @@ extension TextStyles on Text {
     }
     return null;
   }
+
+  Text m1() {
+    if (this is Text) {
+      final Text t = this;
+      return Text(
+        t.data,
+        style: TextStyle(
+          color: ColorTheme.white,
+          fontWeight: FontWeight.w400,
+          fontSize: 14.0,
+          fontFamily: openSans,
+        ),
+        textAlign: TextAlign.center,
+      );
+    }
+    return null;
+  }
 }
 
 extension TextSpanStyles on TextSpan {
@@ -152,7 +169,7 @@ extension TextSpanStyles on TextSpan {
       return TextSpan(
         text: t.text,
         style: TextStyle(
-          color: Colors.red,
+          color: ColorTheme.red,
           fontSize: 14,
           decoration: TextDecoration.underline,
           fontWeight: FontWeight.w800,
