@@ -16,12 +16,14 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      onPressed: active && !loading ? onPressed : null,
-      color: ColorTheme.green,
-      child: Container(
-        child: loading ? CustomProgressIndicator() : Text(label).b1(),
-      ).paddingAll(Space.dodger_blue),
-    );
+    return loading
+        ? CustomProgressIndicator()
+        : FlatButton(
+            onPressed: active && !loading ? onPressed : () {},
+            color: ColorTheme.green,
+            child: Container(
+              child: Text(label).b1(),
+            ),
+          );
   }
 }
