@@ -21,9 +21,28 @@ class _FormPageState extends State<FormPage> {
   final TextEditingController feedbackController = TextEditingController();
 
   FocusScopeNode currentFocus;
+  List<String> howFindItems = [
+    'Telegram',
+    'Twitter',
+    'LinkedIn',
+    'Instagram',
+    'Amigo',
+  ];
+
+  List<String> firstMeetupItems = [
+    'Sim',
+    'Não',
+  ];
+
+  bool _isLoading = false;
 
   void _submitForm() {
-    if (_formKey.currentState.validate()) {
+    if (_formKey.currentState.validate() &&
+        howFindController.text.isNotEmpty &&
+        firstMeetupController.text.isNotEmpty) {
+      setState(() {
+        _isLoading = true;
+      });
       final FormModel formModel = FormModel(
         nameController.text,
         genreController.text,
@@ -34,20 +53,73 @@ class _FormPageState extends State<FormPage> {
 
       final FormApi formApi = FormApi((String response) {
         if (response == FormApi.STATUS_SUCCESS) {
-          _showSnackbar("Feedback Submitted");
+          _showFlashMessage(
+            "Form Submetido :D !",
+            position: FlashPosition.top,
+          );
+          nameController.clear();
+          genreController.clear();
+          howFindController.clear();
+          firstMeetupController.clear();
+          feedbackController.clear();
+          setState(() {
+            _isLoading = false;
+          });
+        } else if (response == FormApi.STATUS_ERROR) {
+          _showFlashMessage(
+            "Ops! Erro ao Submeter o Form, Tente novamente.",
+            position: FlashPosition.top,
+          );
+          setState(() {
+            _isLoading = false;
+          });
         } else {
-          _showSnackbar("Error Occurred!");
+          _showFlashMessage(
+            "Ops! Tente novamente.",
+            position: FlashPosition.top,
+          );
+          setState(() {
+            _isLoading = false;
+          });
         }
       });
-
-      _showSnackbar("Submitting Feedback");
+      _showFlashMessage(
+        "Submetendo Form...",
+        position: FlashPosition.top,
+      );
       formApi.submitForm(formModel);
+    } else {
+      _showFlashMessage(
+        "Ops! Algum campo em branco! Por favor, preencher todos ;) ",
+        position: FlashPosition.top,
+      );
     }
   }
 
-  void _showSnackbar(String message) {
-    final snackBar = SnackBar(content: Text(message));
-    _scaffoldKey.currentState.showSnackBar(snackBar);
+  void _showFlashMessage(
+    String message, {
+    FlashPosition position = FlashPosition.center,
+  }) {
+    showFlash(
+      context: context,
+      duration: Duration(seconds: 2),
+      builder: (_, controller) {
+        return FlashMessage(
+          controller: controller,
+          backgroundColor: ColorTheme.heavyBlack,
+          position: position,
+          style: FlashStyle.grounded,
+          enableDrag: false,
+          onTap: () => controller.dismiss(),
+          child: Padding(
+            padding: EdgeInsets.all(Space.dodger_blue),
+            child: Text(
+              message,
+            ).m1(),
+          ),
+        );
+      },
+    );
   }
 
   void _unfocus() {
@@ -106,7 +178,9 @@ class _FormPageState extends State<FormPage> {
                           _buildForm(),
                           Container(
                             child: DefaultButton(
-                              label: 'Submeter Feedback',
+                              label: 'Submeter Form',
+                              active: !_isLoading,
+                              loading: _isLoading,
                               onPressed: _submitForm,
                             ),
                           ).paddingOnly(
@@ -157,9 +231,11 @@ class _FormPageState extends State<FormPage> {
           children: <Widget>[
             TextFormField(
               controller: nameController,
+              enabled: !_isLoading,
+              maxLength: 50,
               validator: (value) {
                 if (value.isEmpty) {
-                  return 'Nome';
+                  return 'Seu Nome';
                 }
                 return null;
               },
@@ -167,43 +243,48 @@ class _FormPageState extends State<FormPage> {
             ),
             TextFormField(
               controller: genreController,
+              enabled: !_isLoading,
+              maxLength: 50,
               validator: (value) {
                 if (value.isEmpty) {
-                  return 'Gênero';
+                  return 'Seu Gênero';
                 }
                 return null;
               },
               keyboardType: TextInputType.text,
               decoration: InputDecoration(labelText: 'Seu Gênero'),
             ),
-            TextFormField(
+            Dropdown(
               controller: howFindController,
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Telegram, Twitter, LinkedIn, Instagram, Amigo...';
-                }
-                return null;
-              },
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                labelText: 'Como Achou o React Recife?',
+              field: TextFormField(
+                controller: howFindController,
+                enabled: false,
+                maxLength: 50,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  labelText: 'Como Achou do React Recife?',
+                ),
               ),
+              items: howFindItems,
             ),
-            TextFormField(
+            Dropdown(
               controller: firstMeetupController,
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Primeira vez em um meetup nosso?';
-                }
-                return null;
-              },
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                labelText: 'E sua primeira vez no meetup do React Recife?',
+              field: TextFormField(
+                controller: firstMeetupController,
+                enabled: false,
+                maxLength: 50,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  labelText: 'Sua primeira vez no meetup?',
+                ),
               ),
+              items: firstMeetupItems,
             ),
             TextFormField(
               controller: feedbackController,
+              enabled: !_isLoading,
+              maxLength: 150,
+              maxLines: 2,
               validator: (value) {
                 if (value.isEmpty) {
                   return 'De seu Feedback pls, ty :)';
