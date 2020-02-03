@@ -38,7 +38,7 @@ This app was developed in Flutter and run on Mobile (Android/iOS), Web and PWA!
 
 ## How Config the Google Sheet to save Formpad data 🤔?
 
-You just need follow this steps [Here](https://github.com/samuelematias/Formpad/blob/master/GOOGLE_SHEET.md)
+You just need follow this steps [Here](https://github.com/samuelematias/Formpad/blob/master/GOOGLE_SHEET.MD)
 
 ## With version to work the Flutter Web and PWA config 🤔?
 
