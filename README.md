@@ -66,7 +66,3 @@ This app is still in development (BETA PHASE), so it may contain some bugs. The 
 - [http](https://pub.dev/packages/http)
 - [url_launcher](https://pub.dev/packages/url_launcher)
 - [flutter_icons](https://pub.dev/packages/flutter_icons)
-
-```
-
-```

@@ -100,7 +100,3 @@ Here, we’ll retrieve parameters using request.parameter . Finally, by using a 
 </p>
 
 We’ve done this part. Let’s see Flutter implementation 🚀!
-
-```
-
-```
