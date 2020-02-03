@@ -8,7 +8,7 @@
 <p align="center">
   <img src="https://i.imgur.com/B1kNldO.png" height="224"  /><br/>
   <span><b>Formpad.</b></span><br/>
-  <a href="https://formpad.netlify.com/">Access it</a>.
+  <a href="https://formpad.netlify.com/">Access it</a>.<br/>
   <span>Application Developed in <b>Flutter.</b></span><br/>
   <span>Running on both mobile platforms, <b>Android 🤖</b>, <b>iOS 🍎</b>, <b>Web 🕸</b> & <b>PWA 📱</b>. </span><br/>
 </p>
@@ -34,7 +34,7 @@ An example where Formpad can be used would be an event where you are performing 
 
 This app was developed in Flutter and run on Mobile (Android/iOS), Web and PWA!
 
-## Beta app phase
+## Beta phase
 
 This app is still in development (BETA PHASE), so it may contain some bugs. The project is open source, so feel free to open a PR!
 
