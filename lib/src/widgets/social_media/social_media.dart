@@ -23,7 +23,7 @@ class SocialMedia extends StatelessWidget {
           child: FlatButton(
             onPressed: () => ExternalBrowser.open(
               context: context,
-              url: "https://github.com/samuelematias",
+              url: "https://github.com/samuelematias/Formpad",
             ),
             color: ColorTheme.green,
             child: Icon(
