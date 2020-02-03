@@ -36,6 +36,22 @@ For now, you can only change the spreadsheet in the code. Embreve do in a way th
 
 This app was developed in Flutter and run on Mobile (Android/iOS), Web and PWA!
 
+## How Config the Google Sheet to save Formpad data 🤔?
+
+You just need follow this steps [Here](https://github.com/samuelematias/Formpad/blob/master/GOOGLE_SHEET.md)
+
+## With version to work the Flutter Web and PWA config 🤔?
+
+You need change your channel to master, like this:
+
+```bash
+flutter channel master
+flutter upgrade
+flutter config --enable-web
+```
+
+and use flutter 1.14 +++!
+
 ## Beta phase
 
 This app is still in development (BETA PHASE), so it may contain some bugs. The project is open source, so feel free to open a PR!
@@ -50,3 +66,7 @@ This app is still in development (BETA PHASE), so it may contain some bugs. The 
 - [http](https://pub.dev/packages/http)
 - [url_launcher](https://pub.dev/packages/url_launcher)
 - [flutter_icons](https://pub.dev/packages/flutter_icons)
+
+```
+
+```
