@@ -85,7 +85,7 @@ flutter run -d all
 
 ## Beta phase
 
-This app is still in development (BETA PHASE), so it may contain some bugs. The project is open source, so feel free to open a PR!
+This app is **still in development** (**BETA PHASE**), so it may contain some bugs. The project is **open source**, so feel free to open a PR!
 
 ## Tech Stack
 
