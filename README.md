@@ -32,7 +32,7 @@ All data placed on the Form will be sent and saved in your **Google Sheets**.
 
 An example where **Formpad** can be used would be an event where you are performing and you want to collect feedback on your presentation at the time or during your presentation. All feedbacks will be saved instantly and easily on your **Google Sheets**.
 
-For now, you can only change the **Google Sheets** in the code. Embreve do in a way that it could be changed remotely, **Wait for Updates**!
+For now, you can only change the **Google Sheets** in the code. Embreve do in a way that it could be changed remotely, so **Wait for Updates**!
 
 This app was developed in Flutter and run on **Mobile (Android/iOS)**, **Web** and **PWA**!
 
