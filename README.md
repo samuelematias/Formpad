@@ -51,6 +51,8 @@ flutter config --enable-web
 flutter devices
 ```
 
+## How run this project 🤔?
+
 To run your project on web you need have the chrome installed on your PC/Mac and aftert run this code bellow:
 
 ```bash
