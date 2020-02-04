@@ -27,34 +27,65 @@
 
 ## About this app
 
-Formpad is a app where you can work with Forms next to Google Sheets in an easy way!
-All data placed on the Form will be sent and saved in your Google Sheets.
+**Formpad** is a app where you can **work** with Forms next to **Google Sheets** in an easy way!
+All data placed on the Form will be sent and saved in your **Google Sheets**.
 
-An example where Formpad can be used would be an event where you are performing and you want to collect feedback on your presentation at the time or during your presentation. All feedbacks will be saved instantly and easily on your Google Sheets.
+An example where **Formpad** can be used would be an event where you are performing and you want to collect feedback on your presentation at the time or during your presentation. All feedbacks will be saved instantly and easily on your **Google Sheets**.
 
-For now, you can only change the spreadsheet in the code. Embreve do in a way that it could be changed remotely, wait for new updates!
+For now, you can only change the **Google Sheets** in the code. Embreve do in a way that it could be changed remotely, so **Wait for Updates**!
 
-This app was developed in Flutter and run on Mobile (Android/iOS), Web and PWA!
+This app was developed in [Flutter](https://flutter.dev/) and run on **Mobile (Android/iOS)**, **Web** and **PWA**!
 
 ## How Config the Google Sheet to save Formpad data 🤔?
 
-You just need follow this steps [Here](https://github.com/samuelematias/Formpad/blob/master/GOOGLE_SHEET.md)
+You just need follow this steps [Here](https://github.com/samuelematias/Formpad/blob/master/GOOGLE_SHEET.MD)
 
 ## With version to work the Flutter Web and PWA config 🤔?
 
-You need change your channel to master, like this:
+You need change your **channel** to **master** and use the version of **Flutter 1.14 +++** and aftert run this code bellow:
 
 ```bash
 flutter channel master
 flutter upgrade
 flutter config --enable-web
+flutter devices
 ```
 
-and use flutter 1.14 +++!
+## How run this project 🤔?
+
+To run your project on web you need have the chrome installed on your PC/Mac and aftert run this code bellow:
+
+```bash
+flutter run -d chrome
+```
+
+To build your web project, run this code bellow:
+
+```bash
+flutter build web
+```
+
+To create the PWA files (e.g. Manifest, service_worked, etc..), delete the index.html on web folder and after run this code bellow:
+
+```bash
+flutter create .
+```
+
+To run your project on mobile, run this code bellow:
+
+```bash
+flutter run
+```
+
+To run your project on mobile (more than one device), run this code bellow:
+
+```bash
+flutter run -d all
+```
 
 ## Beta phase
 
-This app is still in development (BETA PHASE), so it may contain some bugs. The project is open source, so feel free to open a PR!
+This **app is still in development** (**BETA PHASE**), so it may contain some bugs. The **project** is **open source**, so feel free to **Open a PR**!
 
 ## Tech Stack
 
