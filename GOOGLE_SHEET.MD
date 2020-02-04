@@ -93,7 +93,7 @@ Here, we’ll retrieve parameters using request.parameter . Finally, by using a 
   <img src="https://i.imgur.com/91RZb8y.png" height="224"  /><br/>
 </p>
 
-- Finally, you’ll get a window like this with the Web app URL. Copy that Web URL for a reference. We’ll use this URL for making HTTP GET requests from our flutter app.
+- Finally, you’ll get a window like this with the Web app URL. Copy that Web URL for a reference and replace the string of the URL variable in the form.dart file on this path "lib/src/core/data/api/" with this URL that you copy. We’ll use this URL for making HTTP GET requests from our flutter app.
 
 <p align="center">
   <img src="https://i.imgur.com/Ocz8CS8.png" height="224"  /><br/>
