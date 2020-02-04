@@ -27,10 +27,10 @@
 
 ## About this app
 
-**Formpad** is a app where you can work with Forms next to Google Sheets in an easy way!
-All data placed on the Form will be sent and saved in your Google Sheets.
+**Formpad** is a app where you can **work** with Forms next to **Google Sheets** in an easy way!
+All data placed on the Form will be sent and saved in your **Google Sheets**.
 
-An example where **Formpad** can be used would be an event where you are performing and you want to collect feedback on your presentation at the time or during your presentation. All feedbacks will be saved instantly and easily on your Google Sheets.
+An example where **Formpad** can be used would be an event where you are performing and you want to collect feedback on your presentation at the time or during your presentation. All feedbacks will be saved instantly and easily on your **Google Sheets**.
 
 For now, you can only change the spreadsheet in the code. Embreve do in a way that it could be changed remotely, wait for new updates!
 
