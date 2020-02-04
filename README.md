@@ -34,7 +34,7 @@ An example where **Formpad** can be used would be an event where you are perform
 
 For now, you can only change the **Google Sheets** in the code. Embreve do in a way that it could be changed remotely, so **Wait for Updates**!
 
-This app was developed in Flutter and run on **Mobile (Android/iOS)**, **Web** and **PWA**!
+This app was developed in [Flutter](https://flutter.dev/) and run on **Mobile (Android/iOS)**, **Web** and **PWA**!
 
 ## How Config the Google Sheet to save Formpad data 🤔?
 
