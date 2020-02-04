@@ -59,7 +59,7 @@ To run your project on web you need have the chrome installed on your PC/Mac and
 flutter run -d chrome
 ```
 
-To build your web project, run this code bellow::
+To build your web project, run this code bellow:
 
 ```bash
 flutter build web
