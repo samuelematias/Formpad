@@ -42,15 +42,44 @@ You just need follow this steps [Here](https://github.com/samuelematias/Formpad/
 
 ## With version to work the Flutter Web and PWA config 🤔?
 
-You need change your channel to master, like this:
+You need change your channel to master and use the version of flutter 1.14 +++ and aftert run this code bellow:
 
 ```bash
 flutter channel master
 flutter upgrade
 flutter config --enable-web
+flutter devices
 ```
 
-and use flutter 1.14 +++!
+To run your project on web you need have the chrome installed on your PC/Mac and aftert run this code bellow:
+
+```bash
+flutter run -d chrome
+```
+
+To build your web project, run this code bellow::
+
+```bash
+flutter build web
+```
+
+To create the PWA files (e.g. Manifest, service_worked, etc..), delete the index.html on web folder and after run this code bellow:
+
+```bash
+flutter create .
+```
+
+To run your project on mobile, run this code bellow:
+
+```bash
+flutter run
+```
+
+To run your project on mobile (more than one device), run this code bellow:
+
+```bash
+flutter run -d all
+```
 
 ## Beta phase
 
