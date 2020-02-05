@@ -36,9 +36,8 @@ class _FormPageState extends State<FormPage> {
   List<String> genreItems = [
     'Masculino',
     'Feminino',
-    'Trans',
     'Não-binário',
-    'Outro',
+    'Outros',
   ];
 
   bool _isLoading = false;
