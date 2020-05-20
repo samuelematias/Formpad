@@ -265,7 +265,7 @@ class _FormPageState extends State<FormPage> {
             TextFormField(
               controller: feedbackController,
               enabled: !_isLoading,
-              maxLength: 100,
+              maxLength: 400,
               maxLines: 1,
               validator: (value) {
                 if (value.isEmpty) {
