@@ -11,7 +11,11 @@
   <img src="https://i.imgur.com/YmMiyVX.png" height="224"  /><br/>
 </p>
 
-As above, I’ve set up header columns of the sheet. You can see I’ve highlighted part of the URL. It is the Sheet ID of our current document. Just copy it, we’ll require it in the next step. Every document has a unique Sheet ID.
+As above, I’ve set up header columns of the sheet. You can see I’ve highlighted part of the URL. It is the Sheet ID of our current document. Just copy it, we’ll require it in the next step. Every document has a unique Sheet ID (in purple).
+
+<p align="center">
+  <img src="https://i.imgur.com/y2PXsnZ.png" height="224" /><br/>
+</p>
 
 - As in below Image, Just go to Tools → Script Editor.
 
