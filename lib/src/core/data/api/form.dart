@@ -10,7 +10,7 @@ class FormApi {
 
   // Google App Script Web URL.
   static const String URL =
-      "https://script.google.com/macros/s/AKfycbxDTH7ZCW70M6ERRJnAMEjc3DbJLEuCFekzAao-uNiXUAB9Wr9G/exec";
+      "https://script.google.com/macros/s/AKfycbylEUEwNMKsNBeoC6kfm5coOV367DAp0rJcRBrn5Bi1gcDKCzE/exec";
 
   // Success Status Message
   static const STATUS_SUCCESS = "SUCCESS";
